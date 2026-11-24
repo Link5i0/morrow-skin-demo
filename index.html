@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morrow Skin — Minimalist Barrier Skincare</title>
+  <meta name="description" content="Morrow Skin crafts quiet, clinically balanced skincare essentials designed to cleanse, replenish, and seal your skin barrier.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FAF6F0'/%3E%3Ccircle cx='16' cy='16' r='8' fill='%23D96B38'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div id="top"></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" role="region" aria-label="Store announcement">
+    <p>Complimentary shipping on orders $60+ &middot; Small-batch minimalist skincare</p>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-logo" id="brand-name-header">Morrow Skin</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#best-sellers" class="nav-link">Shop</a>
+        <button type="button" class="nav-link nav-link-btn" data-open-ritual>The Ritual</button>
+        <a href="#trust" class="nav-link">Standards</a>
+        <a href="#newsletter" class="nav-link">Journal</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="mobile-menu-btn"
+          id="mobile-menu-btn"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 5.5H17M3 10H17M3 14.5H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <button
+          type="button"
+          class="cart-trigger"
+          id="cart-open-btn"
+          aria-haspopup="dialog"
+          aria-controls="cart-drawer"
+          aria-expanded="false"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 7H18L19 20H5L6 7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M9 7V6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>Cart</span>
+          <span class="cart-badge" id="cart-count" aria-live="polite">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+      <div class="container mobile-nav-inner">
+        <a href="#best-sellers" class="mobile-nav-link">Shop Collection</a>
+        <button type="button" class="mobile-nav-link mobile-nav-btn" data-open-ritual>Explore The Ritual</button>
+        <a href="#trust" class="mobile-nav-link">Clinical Standards</a>
+        <a href="#newsletter" class="mobile-nav-link">The Journal</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Barrier-First Minimalist Skincare</p>
+          <h1 id="hero-title" class="hero-title">Quiet essentials for resilient, luminous skin.</h1>
+          <p class="hero-subtitle">
+            Three clinically balanced formulas designed to cleanse, replenish, and seal moisture—without noise or unnecessary steps.
+          </p>
+          <div class="hero-actions">
+            <a href="#best-sellers" class="btn btn-primary">Shop the collection</a>
+            <button type="button" class="btn btn-secondary" data-open-ritual>Explore ritual</button>
+          </div>
+          <p class="hero-meta">3 Core Formulas &middot; Fragrance-Free &middot; Sensitive-Skin Safe</p>
+        </div>
+
+        <figure class="hero-media">
+          <div class="hero-image-frame">
+            <img
+              src="./assets/hero-collection.webp"
+              alt="Morrow Skin three-step skincare collection featuring Gentle Cream Cleanser, Barrier Glow Serum, and Velvet Moisture Cream on a warm cream plinth"
+              width="960"
+              height="1200"
+              fetchpriority="high"
+            >
+          </div>
+          <figcaption class="hero-caption">
+            <span>The Daily Trio</span>
+            <span class="caption-dot" aria-hidden="true"></span>
+            <span>Cleanse &middot; Treat &middot; Seal</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section class="best-sellers" id="best-sellers" aria-labelledby="best-sellers-title">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Best Sellers</p>
+            <h2 id="best-sellers-title" class="section-title">The three-step edit</h2>
+          </div>
+          <p class="section-subtitle">
+            Each formula pairs soothing lipids with high-purity actives to keep your barrier calm morning and night.
+          </p>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+          <!-- Populated dynamically by app.js from PRODUCTS config -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar Section -->
+    <section class="trust-section" id="trust" aria-labelledby="trust-heading">
+      <div class="container">
+        <h2 id="trust-heading" class="sr-only">Morrow Skin Standards</h2>
+        <div class="trust-grid">
+          <article class="trust-item">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3L4 6.5V12C4 16.97 7.42 21.48 12 22.8C16.58 21.48 20 16.97 20 12V6.5L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M9 12.5L11 14.5L15.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="trust-title">Dermatologist Tested</h3>
+              <p class="trust-copy">Clinically evaluated for sensitive, reactive skin barriers with zero synthetic fragrance.</p>
+            </div>
+          </article>
+
+          <article class="trust-item">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8.5 13.5C9.5 10.5 12.5 8.5 15.5 8.5C15.5 11.5 13.5 14.5 10.5 15.5C9.5 15.8 8.2 14.5 8.5 13.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="trust-title">Cruelty-Free</h3>
+              <p class="trust-copy">100% vegan, Leaping Bunny–aligned formulations crafted without animal testing.</p>
+            </div>
+          </article>
+
+          <article class="trust-item">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M4 12C4 7.58172 7.58172 4 12 4C15.05 4 17.7 5.71 19.04 8.22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M20 4.5V8.5H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20 12C20 16.4183 16.4183 20 12 20C8.95 20 6.3 18.29 4.96 15.78" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 19.5V15.5H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="trust-title">30-Day Guarantee</h3>
+              <p class="trust-copy">Live with your ritual for 30 days—if your skin isn’t calmer, returns are on us.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="container">
+        <div class="newsletter-box">
+          <div class="newsletter-copy">
+            <p class="eyebrow">The Morrow Journal</p>
+            <h2 id="newsletter-title" class="newsletter-title">Slow skincare, delivered thoughtfully.</h2>
+            <p class="newsletter-subtitle">
+              Receive small-batch restock notes, barrier care guides, and 10% off your first ritual.
+            </p>
+          </div>
+
+          <form id="newsletter-form" class="newsletter-form" novalidate>
+            <div class="newsletter-input-group">
+              <label class="sr-only" for="newsletter-email">Email address</label>
+              <input
+                id="newsletter-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="Enter your email address"
+                required
+                aria-describedby="newsletter-feedback"
+              >
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+            <p id="newsletter-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#top" class="brand-logo" id="brand-name-footer">Morrow Skin</a>
+        <p class="footer-tagline">Quiet, barrier-first formulations for daily calm.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#best-sellers">Shop</a>
+        <button type="button" class="footer-link-btn" data-open-ritual>The Ritual</button>
+        <a href="#trust">Standards</a>
+        <a href="#newsletter">Journal</a>
+        <a href="#top">Back to top</a>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Morrow Skin &middot; Independent portfolio concept. No real transactions are processed.</p>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Cart Drawer -->
+  <div id="cart-drawer" class="overlay drawer-overlay" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title" hidden>
+    <div class="overlay-backdrop" data-close-overlay></div>
+    <aside class="drawer-panel">
+      <div class="drawer-header">
+        <h2 id="cart-drawer-title" class="drawer-title">Your Cart (<span id="drawer-cart-count">0</span>)</h2>
+        <button type="button" class="icon-close-btn" data-close-overlay aria-label="Close cart">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="shipping-meter">
+        <p id="shipping-status-text" class="shipping-status-text">Add $60.00 more for complimentary shipping.</p>
+        <div class="shipping-bar-track" aria-hidden="true">
+          <div id="shipping-bar-fill" class="shipping-bar-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div id="cart-body" class="drawer-body">
+        <!-- Cart items or empty state injected by app.js -->
+      </div>
+
+      <div id="cart-footer" class="drawer-footer">
+        <div class="subtotal-row">
+          <span>Subtotal</span>
+          <strong id="cart-subtotal" class="tabular-nums">$0.00</strong>
+        </div>
+        <p class="shipping-note" id="cart-shipping-note">Shipping calculated at checkout.</p>
+        <button type="button" id="checkout-btn" class="btn btn-primary btn-full">Checkout</button>
+        <div id="checkout-demo-notice" class="demo-notice" role="status" aria-live="polite" hidden>
+          <strong>Portfolio Demo Mode:</strong> Checkout is simulated here. In production, this action connects directly to Shopify Checkout, Stripe Payment Links, or a custom headless cart API.
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 3-Step Ritual Modal -->
+  <div id="ritual-modal" class="overlay modal-overlay" role="dialog" aria-modal="true" aria-labelledby="ritual-modal-title" hidden>
+    <div class="overlay-backdrop" data-close-overlay></div>
+    <div class="modal-panel modal-panel-wide">
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow">The 3-Step Daily Method</p>
+          <h2 id="ritual-modal-title" class="modal-title">Cleanse &middot; Treat &middot; Seal</h2>
+        </div>
+        <button type="button" class="icon-close-btn" data-close-overlay aria-label="Close ritual guide">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p class="ritual-intro">
+          Designed to work together in under three minutes morning and evening—restoring hydration without stripping your natural lipid barrier.
+        </p>
+
+        <div id="ritual-steps-list" class="ritual-steps-list">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+
+      <div class="modal-footer ritual-footer">
+        <p class="ritual-bundle-note">Includes standard sizes of all three core formulas.</p>
+        <button type="button" id="add-full-ritual-btn" class="btn btn-primary">Add Full 3-Step Ritual ($102)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Quick View Modal -->
+  <div id="quick-view-modal" class="overlay modal-overlay" role="dialog" aria-modal="true" aria-labelledby="qv-title" hidden>
+    <div class="overlay-backdrop" data-close-overlay></div>
+    <div class="modal-panel modal-panel-wide">
+      <button type="button" class="icon-close-btn qv-close-btn" data-close-overlay aria-label="Close product quick view">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div id="quick-view-content" class="qv-grid">
+        <!-- Populated dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Screen Reader Status Announcer -->
+  <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
